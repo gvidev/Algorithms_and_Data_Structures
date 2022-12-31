@@ -132,7 +132,8 @@ namespace LinearStructures
                 this.RemoveListNode(currentNode, prevNode);
                 return currentIndex;
             }
-            else {
+            else
+            {
                 return -1;
             }
 
@@ -170,7 +171,7 @@ namespace LinearStructures
         {
             get
             {
-                if(index >= this.count || index < 0)
+                if (index >= this.count || index < 0)
                 {
                     throw new IndexOutOfRangeException($"Invalid index: {index}");
                 }
@@ -209,12 +210,12 @@ namespace LinearStructures
         {
             for (int i = 0; i < count; i++)
             {
-                Console.WriteLine($" -  {this[i]}" );
+                Console.WriteLine($" -  {this[i]}");
             }
         }
 
 
-        
+
 
 
     }

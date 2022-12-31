@@ -42,7 +42,7 @@ namespace LinearStructures
 
         public void Insert(int index, T item)
         {
-            if(index > this.count || index < 0)
+            if (index > this.count || index < 0)
             {
                 throw new IndexOutOfRangeException($"Invalid index: {index}");
             }
@@ -94,7 +94,7 @@ namespace LinearStructures
         {
             get
             {
-                if(index >= this.count || index < 0)
+                if (index >= this.count || index < 0)
                 {
                     throw new IndexOutOfRangeException($"Invalid index: {index}");
                 }
@@ -112,7 +112,7 @@ namespace LinearStructures
 
         public T RemoveAt(int index)
         {
-            if(index < 0 || index >= this.count)
+            if (index < 0 || index >= this.count)
             {
                 throw new IndexOutOfRangeException($"Invalid index: {index}");
             }
@@ -121,7 +121,7 @@ namespace LinearStructures
             T item = this.array[index];
             //coping the elements after the element at position [index+1]
             //and pasting from the position [index] in the destinationArray
-            Array.Copy(this.array,index+1,this.array,index,this.count-index-1);
+            Array.Copy(this.array, index + 1, this.array, index, this.count - index - 1);
             //setting the last element by default of the type T
             this.array[count - 1] = default;
             this.count--;
@@ -133,7 +133,7 @@ namespace LinearStructures
         {
             int index = IndexOf(item);
 
-            if(index >= 0)
+            if (index >= 0)
             {
                 this.RemoveAt(index);
             }
@@ -154,8 +154,8 @@ namespace LinearStructures
             Console.WriteLine();
         }
 
-        
-        
+
+
 
     }
 }
